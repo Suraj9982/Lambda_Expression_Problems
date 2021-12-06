@@ -31,5 +31,16 @@ namespace PersonDataManagment
                 Console.WriteLine("Name:"+person.Name+"\t"+"Age:"+person.Age);
             }
         }
+        public static void Retreiving_Records_Age_BetweenThirteenToEighteen(List<Person> Listperson)
+        {
+            if (Listperson.Any(e => e.Age >= 13 && e.Age <= 19))
+            {
+                Console.WriteLine("There are tenagers in List");
+            }
+            else
+            {
+                Console.WriteLine("There is no tenagers");
+            }
+        }
     }
 }

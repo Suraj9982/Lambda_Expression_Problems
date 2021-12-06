@@ -12,7 +12,7 @@ namespace PersonDataManagment
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("CHOOSE OPTION:\n1.Add Records\n2.Retreive Top Two Age Less Than Sixty\n3.Exit");
+                Console.WriteLine("CHOOSE OPTION:\n1.Add Records\n2.Retreive Top Two Age Less Than Sixty\n3.Retreiving Teenagers\n4.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -24,10 +24,14 @@ namespace PersonDataManagment
                         LambdaOperation.Retreiving_TopTwoRecords_Age_LessThanSixty(Listperson);
                         break;
                     case 3:
+                        LambdaOperation.Addrecords(Listperson);
+                        LambdaOperation.Retreiving_Records_Age_BetweenThirteenToEighteen(Listperson);
+                        break;
+                    case 4:
                         flag = false;
                         break;
                     default:
-                        Console.WriteLine("Your choice between 1 to 3");
+                        Console.WriteLine("Your choice between 1 to 4");
                         break;
                 }
             }
