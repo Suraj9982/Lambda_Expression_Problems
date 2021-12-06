@@ -42,5 +42,10 @@ namespace PersonDataManagment
                 Console.WriteLine("There is no tenagers");
             }
         }
+        public static void Retreiving_Records_Average_Age(List<Person> Listperson)
+        {
+            double averge=Listperson.Average(e=>e.Age);
+            Console.WriteLine("Averge of Age in list:"+averge);
+        }
     }
 }
