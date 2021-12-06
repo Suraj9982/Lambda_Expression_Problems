@@ -47,5 +47,18 @@ namespace PersonDataManagment
             double averge=Listperson.Average(e=>e.Age);
             Console.WriteLine("Averge of Age in list:"+averge);
         }
+        public static void Retreiving_Records_Check_Specific_Name(List<Person> Listperson)
+        {
+            Console.WriteLine("Enter the name");
+            string name = Console.ReadLine();
+            if (Listperson.Any(e => e.Name == name))
+            {
+                Console.WriteLine("This name exist in the list");
+            }
+            else
+            {
+                Console.WriteLine("This name does not exist in the list");
+            }
+        }
     }
 }
