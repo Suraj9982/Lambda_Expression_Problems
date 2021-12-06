@@ -24,5 +24,12 @@ namespace PersonDataManagment
                 Console.WriteLine("SSN:"+item.SSN+"\t"+"Name:"+item.Name+"\t"+"Address:"+item.Address+"\t"+"Age:"+item.Age);
             }
         }
+        public static void Retreiving_TopTwoRecords_Age_LessThanSixty(List<Person> Listperson)
+        {
+            foreach(Person person in Listperson.FindAll(e => e.Age <= 60).Take(2).ToList())
+            {
+                Console.WriteLine("Name:"+person.Name+"\t"+"Age:"+person.Age);
+            }
+        }
     }
 }
