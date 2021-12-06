@@ -60,5 +60,12 @@ namespace PersonDataManagment
                 Console.WriteLine("This name does not exist in the list");
             }
         }
+        public static void Retreiving_Records_Skip_Age_LessThanSixty(List<Person> Listperson)
+        { 
+            foreach(Person person in Listperson.Where(e => e.Age > 60))
+            {
+                Console.WriteLine("Name:" + person.Name + "\t" + "Age:" + person.Age);
+            }
+        }
     }
 }
