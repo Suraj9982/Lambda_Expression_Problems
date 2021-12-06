@@ -13,7 +13,7 @@ namespace PersonDataManagment
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("CHOOSE OPTION:\n1.Add Records\n2.Retreive Top Two Age Less Than Sixty\n3.Retreiving Teenagers\n4.Find Average Age\n5.Check for specific name\n6.Skip Which Age is less than Sixty\n7.Exit");
+                Console.WriteLine("CHOOSE OPTION:\n1.Add Records\n2.Retreive Top Two Age Less Than Sixty\n3.Retreiving Teenagers\n4.Find Average Age\n5.Check for specific name\n6.Skip Which Age is less than Sixty\n7.Remove Specifc Name\n8.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -36,10 +36,13 @@ namespace PersonDataManagment
                         LambdaOperation.Retreiving_Records_Skip_Age_LessThanSixty(Listperson);
                         break;
                     case 7:
+                        LambdaOperation.Remove_Specific_Name(Listperson);
+                        break;
+                    case 8:
                         flag = false;
                         break;
                     default:
-                        Console.WriteLine("Your choice between 1 to 7");
+                        Console.WriteLine("Your choice between 1 to 8");
                         break;
                 }
             }
